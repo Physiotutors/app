@@ -5,15 +5,16 @@
     <script type="text/javascript">
         function redirectToApp() {
             var ua = navigator.userAgent;
-
-            if (/Android/i.test(ua)) {
-                window.location.href = 'https://play.google.com/store/apps/details?id=com.physiotutors.app';
-            } else if (/iPhone|iPad|iPod/i.test(ua)) {
-                window.location.href = 'https://apps.apple.com/us/app/physiotutors/id6463856810';
-            } else {
-                // Fallback for desktops and other devices
-                window.location.href = 'https://www.physiotutors.com/physiotutors-app/';
-            }
+            setTimeout(function() {
+                if (/Android/i.test(ua)) {
+                    window.location.href = 'https://play.google.com/store/apps/details?id=com.physiotutors.app';
+                } else if (/iPhone|iPad|iPod/i.test(ua)) {
+                    window.location.href = 'https://apps.apple.com/us/app/physiotutors/id6463856810';
+                } else {
+                    // Fallback for desktops and other devices
+                    window.location.href = 'https://www.physiotutors.com/physiotutors-app/';
+                }
+            }, 3000); // 3000 milliseconds = 3 seconds
         }
     </script>
 </head>
